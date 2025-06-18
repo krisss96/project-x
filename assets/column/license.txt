@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ionic Column
+* source:	https://sketchfab.com/3d-models/ionic-column-c9bfad9125de4a06956beffc5e071531
+* author:	Kabourek Roman (https://sketchfab.com/Krakatit)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ionic Column" (https://sketchfab.com/3d-models/ionic-column-c9bfad9125de4a06956beffc5e071531) by Kabourek Roman (https://sketchfab.com/Krakatit) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

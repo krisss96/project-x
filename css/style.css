@@ -1,0 +1,384 @@
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: #28282f;
+  margin: 0em;
+}
+
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+body {
+  margin: 0em;
+  padding: 0em;
+  overflow: hidden;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,
+    "Lucida Grande", sans-serif;
+  background-color: #121212;
+  cursor: url("http://www.rw-designer.com/cursor-view/97756.png") 16 16, auto;
+}
+
+p,
+img,
+div,
+canvas {
+  vertical-align: top;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: #34495e;
+  background-color: #34495e;
+  color: #fff;
+}
+
+::selection {
+  /* Code for Chrome, Safari and Opera */
+  background: #34495e;
+  background-color: #34495e;
+  color: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+#menu {
+  width: 40em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.2em;
+  border-radius: 0.9em;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  background-image: url('/static/background.jpg');
+  background-size: cover;
+  z-index: 10;
+  min-height: 10rem;
+  padding: 1rem;
+  overflow: visible; 
+}
+#menu .title {
+  padding: 1em;
+  color: #CAA56A;
+  border-radius: 0.9em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 0px #CAA56A, 4px 4px 0px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 2s ease-in, shadow-pulse 2s infinite;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    text-shadow: 2px 2px 0px #5C2015, 4px 4px 0px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    text-shadow: 4px 4px 0px #5C2015, 8px 8px 0px rgba(0, 0, 0, 0.4);
+  }
+}
+
+#menu .title:hover {
+  transform: rotateX(0deg); 
+}
+
+.title-info {
+
+  color: #000000;
+  padding: 1em;
+  border-radius: 0.9em;
+  
+  text-align: center;
+  margin: 0 auto;
+ 
+}
+.title-text {
+   font-size: 1.4rem;
+   margin-top: 0;
+ 
+}
+#menu #content_container {
+  padding: 1em;
+  border-bottom-left-radius: 0.9em;
+  border-bottom-right-radius: 0.9em;
+
+  -webkit-box-shadow: 0em 0.25em 0.75em rgba(124, 124, 124, 0.5);
+  -moz-box-shadow: 0em 0.25em 0.75em rgba(124, 124, 124, 0.5);
+  box-shadow: 0em 0.25em 0.75em rgba(124, 124, 124, 0.5);
+}
+
+
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+#menu .title h1 {
+  margin: 0;
+  font-size: 4rem;
+  font-family:'Civiltype', sans-serif;
+}
+
+@font-face {
+font-family:'Civiltype' ;
+  src: url('/fonts/EmotionalRescuePersonalUseRegular-PKY87.ttf') format('truetype');
+}
+
+@font-face {
+font-family:'intro' ;
+  src: url('/fonts/civitype.ttf') format('truetype');
+}
+
+
+
+#menu #content {
+  padding: 1em;
+}
+
+#menu #content p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin: 0.5em 0;
+}
+
+#play-button {
+  display: inline-block;
+  background-color: #5C2015;
+  color: #CAA56A;
+  border-radius: 0.9em;
+  padding: 1.5em 1.5em;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 1em;
+  transition: all 0.4s;
+}
+
+#menu #play_button:hover {
+  background-color: rgba(52, 58, 125);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.title {
+  margin-top: 2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+
+@keyframes panBg {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+#painting-info {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  width: 300px;
+  height: 150px;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+#painting-info.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#painting-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#painting-info p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+#info-panel {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
+  background-color: rgba(35, 35, 190, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+#info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#info-header h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#info-header button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  color: #2323be;
+}
+
+#info-content {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+#info-content p {
+  margin: 5px 0;
+}
+
+#info-panel.collapsed #info-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+#painting-info {
+  background: rgba(255, 255, 255, 0.2);       
+    backdrop-filter: blur(10px);            
+    -webkit-backdrop-filter: blur(10px);             
+   top: 15%;
+  left: 1%;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.9em;
+ height: auto;
+ color: black;
+ position: relative;
+   overflow: hidden;
+
+}
+
+#painting-info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    pointer-events: none;
+    border: 15px solid transparent; 
+    border-image: url('/static/frame.png') 32 stretch; 
+    z-index: 2;
+}
+
+.navs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  flex-direction: column;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ flex-direction: row;
+}
+.item {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  flex-direction: column;
+}
+
+
+.audio-controls {
+  margin: 0;
+  font-size: 1.5em;
+
+}
+
+#start-audio, #stop-audio {
+  color: #5C2015;
+  padding: none;
+  font-weight: bold;
+ cursor: pointer;
+    background: none;      
+    border: none;
+    text-decoration: underline;
+}
+
+
+#menu-button {
+  display: block !important;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #5C2015;
+  color: #CAA56A;
+  z-index: 1000;
+  border-radius: 0.9em;
+  padding: 1.2em 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body.menu-open #menu-button {
+  display: none;
+}
+
+body:not(.menu-open) #menu-button {
+  display: block;
+}
