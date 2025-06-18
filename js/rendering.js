@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { displayPaintingInfo, hidePaintingInfo } from "./paintingInfo.js";
+import { displayPaintingInfo, hidePaintingInfo } from "./paintinginfo.js";
 import { updateMovement } from "./movement.js";
 
 export const setupRendering = (
